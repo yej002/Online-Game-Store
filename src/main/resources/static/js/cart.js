@@ -22,7 +22,7 @@ function checkall(ckbtn) {
 }
 //删除按钮
 function delCartItem(btn) {
-	
+
 	$(btn).parents("tr").remove();
 	//calcTotal();
 }

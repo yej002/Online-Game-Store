@@ -1,0 +1,68 @@
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+
+body {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    background-color: whitesmoke;
+    font-family: 'Open Sans';
+  }
+
+  
+  /* RESPONSIVE CSS
+  -------------------------------------------------- */
+  
+  @media (min-width: 40em) {
+    /* Bump up size of carousel content */
+    .carousel-caption p {
+      margin-bottom: 1.25rem;
+      font-size: 1.25rem;
+      line-height: 1.4;
+    }
+  
+    .featurette-heading {
+      font-size: 50px;
+    }
+  }
+  
+  @media (min-width: 62em) {
+    .featurette-heading {
+      margin-top: 7rem;
+    }
+  }
+
+  .hero {
+    /*background: url("https://images.unsplash.com/photo-1543157145-f78c636d023d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80");*/
+    background-position: top left;
+    background-size: cover;
+    height: 100vh;
+  }
+
+  .lead {
+    font-size: 2em;
+  }
+
+  nav.navbar {
+    background-color: #5b5172;
+  }
+
+.col-md-12:hover{
+  border-color: #0259fc;
+  color: #0259fc;
+  box-shadow: 0.3em 0.3em 0.3em -0.2em #0259fc;
+  transform: translateY(-0.25em);
+  cursor:pointer;
+}
+
+.col-md-11:hover{
+  border-color: #0259fc;
+  color: #0259fc;
+  box-shadow: 0.3em 0.3em 0.3em -0.2em #0259fc;
+  transform: translateY(-0.25em);
+  cursor:pointer;
+}
+
+.panel-heading{
+  color:#D50808;
+}

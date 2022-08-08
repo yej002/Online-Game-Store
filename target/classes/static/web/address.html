@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Game Shop</title>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+		  integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+	<script src="../bootstrap3/jquery-1.8.3.min.js"></script>
+	<script src="../bootstrap3/js/bootstrap.js"></script>
+
+		<link rel="stylesheet" href="../bootstrap3/font-awesome-4.7.0/css/font-awesome.css" />
+		<link rel="stylesheet" type="text/css" href="../css/layout.css" />
+		<link rel="stylesheet" type="text/css" href="../bootstrap3/css/bootstrap.css">
+
+		<script src="../js/adddel.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+	<header>
+		<nav class="navbar navbar-expand-md navbar-dark fixed-top">
+			<a class="navbar-brand font-weight-bold" href="index.html">Game Shop</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+					aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarCollapse">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+					</li>
+					<form class="form-inline mt-2 mt-md-0">
+						<input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+						<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+					</form>
+					<li class="nav-item">
+						<a class="nav-link" href="#"><span class="fa fa-heart"></span> Favorite</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#"><span class="fa fa-file-text"></span> Order History</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="cart.html"><span class="fa fa-cart-plus"></span> Cart</a>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#"
+						   id="navbarDropdownMenuLink" role="button"
+						   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<span class="fa fa-gears"></span> Change Info
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+							<a class="dropdown-item" href="password.html">Change Password</a>
+							<a class="dropdown-item" href="userdata.html">Change Contact Info</a>
+							<a class="dropdown-item" href="upload.html">Change Avatar</a>
+							<a class="dropdown-item" href="address.html">Change Address</a>
+						</div>
+					</li>
+					<li class="nav-item">
+
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="login.html"><span class="fa fa-user"></span> Logout</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+	<div>
+		<img src="../images/index/logo1.png">
+	</div>
+
+	<!----------------end of header-------------------->
+	<div class="container">
+		<div class="col-md-2">
+			<div class="panel-group" id="accordion">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<!---------Left Panel: Order history----------->
+						<p class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">My Orders</a>
+						</p>
+					</div>
+					<div id="collapseOne" class="panel-collapse collapse">
+						<div class="panel-body">
+							<div><a href="#">Order History</a></div>
+							<div><a href="#">Pending Order</a></div>
+							<div><a href="#">In Shipping</a></div>
+							<div><a href="#">Waiting Rate</a></div>
+							<div><a href="#">Request Refund</a></div>
+						</div>
+					</div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<!-----------Left Panel: Change Info-------------->
+						<p class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Update Information</a>
+						</p>
+					</div>
+					<div id="collapseTwo" class="panel-collapse collapse in">
+						<div class="panel-body">
+							<div><a href="password.html">Change Password</a></div>
+							<div><a href="userdata.html">Personal Info</a></div>
+							<div><a href="upload.html">Change Avatar</a></div>
+							<div><a href="address.html"><b>Change Address</b></a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!---------end of left panel---------->
+			</div>
+			<div class="col-md-10">
+				<div class="panel panel-default">
+					<ul class="nav nav-tabs">
+						<li><a href="password.html">Change Password</a></li>
+						<li><a href="userdata.html">Personal Info</a></li>
+						<li><a href="upload.html">Change Avatar</a></li>
+						<li class="active"><a href="#">Change Address</a></li>
+					</ul>
+					<div class="panel-body">
+
+						<!-------------List of Address------------>
+						<table class="table table-striped">
+
+							<thead>
+								<tr>
+									<th>Full Name</th>
+									<th>Address</th>
+									<th>Phone</th>
+									<th colspan="3">Operation</th>
+								</tr>
+							</thead>
+							<tbody id="address-list">
+								<tr>
+									<td>Jing Ye</td>
+									<td>55 9th Street</td>
+									<td>6121234567</td>
+									<td><a class="btn btn-xs btn-info"><span class="fa fa-edit"></span>Update</a></td>
+									<td><a class="btn btn-xs add-del btn-info"><span class="fa fa-trash-o"></span>Delete</a></td>
+									<td><a class="btn btn-xs add-def btn-default">Set Default</a></td>
+								</tr>
+								<tr>
+									<td>Jing Ye</td>
+									<td>55 9th Street</td>
+									<td>6121234567</td>
+									<td><a class="btn btn-xs btn-info"><span class="fa fa-edit"></span>Update</a></td>
+									<td><a class="btn btn-xs add-del btn-info"><span class="fa fa-trash-o"></span>Delete</a></td>
+									<td><a class="btn btn-xs add-def btn-default">Set Default</a></td>
+								</tr>
+								<tr>
+									<td>Jing Ye</td>
+									<td>55 9th Street</td>
+									<td>6121234567</td>
+									<td><a class="btn btn-xs btn-info"><span class="fa fa-edit"></span>Update</a></td>
+									<td><a class="btn btn-xs add-del btn-info"><span class="fa fa-trash-o"></span>Delete</a></td>
+									<td><a class="btn btn-xs add-def btn-default">Set Default</a></td>
+								</tr>
+							</tbody>
+						</table>
+						<a href="addAddress.html" class="btn btn-sm btn-primary"><span class="fa fa-plus"></span>Add New Address</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<script type="text/javascript">
+			$(document).ready(function () {
+				showAddressList();
+			});
+
+			function showAddressList() {
+				$("#address-list").empty();
+				$.ajax({
+					url: "/addresses",
+					type: "GET",
+					dataType: "JSON",
+					success: function (json) {
+						let list = json.data;
+						for (let i = 0; i < list.length; i++) {
+							console.log(list[i].name);
+							let address = '<tr>'
+									+ '<td>#{name}</td>'
+									+ '<td>#{state} #{city} #{address}</td>'
+									+ '<td>#{phone}</td>'
+									+ '<td><a class="btn btn-xs btn-info"><span class="fa fa-edit"></span> 修改</a></td>'
+									+ '<td><a onclick="deleteByAid(#{aid})" class="btn btn-xs add-del btn-info"><span class="fa fa-trash-o"></span> 删除</a></td>'
+									+ '<td><a onclick="setDefault(#{aid})" class="btn btn-xs add-def btn-default">设为默认</a></td>'
+								+ '</tr>';
+
+							address = address.replace(/#{aid}/g, list[i].aid);
+							address = address.replace("#{name}", list[i].name);
+							address = address.replace("#{state}", list[i].stateName);
+							address = address.replace("#{city}", list[i].cityName);
+							address = address.replace("#{address}", list[i].address);
+							address = address.replace("#{phone}", list[i].phone);
+
+							$("#address-list").append(address);
+						}
+						$(".add-def:eq(0)").hide();
+					}
+				});
+			}
+
+			function setDefault(aid) {
+				$.ajax({
+					url: "/addresses/" + aid + "/set_default",
+					type: "POST",
+					dataType: "JSON",
+					success: function(json) {
+						if (json.state == 200) {
+							showAddressList();
+						} else {
+							alert("设置默认收货地址失败！" + json.message);
+						}
+					},
+					error: function(json) {
+						alert("您的登录信息已经过期，请重新登录！HTTP响应码：" + json.status);
+						location.href = "login.html";
+					}
+				});
+			}
+
+			function deleteByAid(aid) {
+				$.ajax({
+					url: "/addresses/" + aid + "/delete",
+					type: "POST",
+					dataType: "JSON",
+					success: function(json) {
+						if (json.state == 200) {
+							showAddressList();
+						} else {
+							alert("删除收货地址失败！" + json.message);
+						}
+					},
+					error: function(xhr) {
+						alert("您的登录信息已经过期，请重新登录！HTTP响应码：" + xhr.status);
+						location.href = "login.html";
+					}
+				});
+			}
+		</script>
+	</body>
+
+</html>

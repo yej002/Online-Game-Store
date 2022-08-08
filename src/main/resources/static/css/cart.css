@@ -1,0 +1,27 @@
+
+.cart-table {
+	text-align: center;
+}
+
+.cart-table th {
+	text-align: center;
+}
+
+.cart-table input {
+	text-align: center;
+}
+
+.num-btn {
+	width: 50px;
+}
+
+.cart-table tbody tr {
+	border-top: 2px dashed #cccccc;
+}
+
+.total-bar {
+	margin: 20px 0;
+	background-color: #f0f7fe;
+	padding: 15px;
+	border-radius: 5px;
+}

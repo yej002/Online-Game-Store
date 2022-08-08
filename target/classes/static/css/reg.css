@@ -1,0 +1,18 @@
+
+.regDiv{
+	height: 420px;
+	width: 400px;
+	background-color: rgba(255, 255, 255, 0.85);
+	float: right;
+	margin: 130px 60px 0 0;
+	border-radius: 10px;
+	color: #666666;
+	padding: 8px;
+}
+
+body{
+	background:url("https://images.unsplash.com/photo-1611996575749-79a3a250f948?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80");
+	background-size: cover;
+	height: 100vh;
+}
+

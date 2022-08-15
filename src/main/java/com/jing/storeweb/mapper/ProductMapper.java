@@ -7,8 +7,8 @@ import java.util.List;
 /** This interface design the command for product writing in to SQL */
 public interface ProductMapper {
     /**
-     * Return the list of most popular 4 products
-     * @return the list of most popular 4 products
+     * Return the list of most popular 6 products
+     * @return the list of most popular 6 products
      */
     List<Product> findHotList();
 

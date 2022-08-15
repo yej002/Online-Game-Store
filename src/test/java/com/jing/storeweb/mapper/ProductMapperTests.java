@@ -8,13 +8,18 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.List;
-
+/**
+ * This class represents the Junit test and integration test for the product mapper class
+ */
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class ProductMapperTests {
     @Autowired
     private ProductMapper productMapper;
 
+    /**
+     * Test for find the top 6 products sorted by priority, result should be a list of top 6 priority products
+     */
     @Test
     public void findHotList() {
         List<Product> list = productMapper.findHotList();
@@ -24,6 +29,9 @@ public class ProductMapperTests {
         }
     }
 
+    /**
+     * Test for find product by product id, result should be the product matched
+     */
     @Test
     public void findById() {
         Integer id = 10000001;

@@ -7,6 +7,9 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 
 import javax.servlet.http.HttpSession;
 
+/**
+ * This class defined the common elements of the controller
+ */
 public class BaseController {
     /** request response success, code 200 */
     public static final int OK = 200;
@@ -32,7 +35,7 @@ public class BaseController {
     /** @ExceptionHandler Used to uniformly handle exceptions thrown by methods */
     @ExceptionHandler({ServiceException.class, FileUploadException.class})
     public JsonResult<Void> handleException(Throwable e) {
-        JsonResult<Void> result = new JsonResult<Void>(e);
+        JsonResult<Void> result = new JsonResult<>(e);
         if (e instanceof UsernameDuplicateException) {
             result.setState(4000);
         } else if (e instanceof UserNotFoundException) {

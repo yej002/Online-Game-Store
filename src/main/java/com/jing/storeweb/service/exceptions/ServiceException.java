@@ -1,7 +1,7 @@
 package com.jing.storeweb.service.exceptions;
 
 /**
- * This class handles exceptions related to Service
+ * This class handles exceptions related to Service as abstract class
  */
 // generate override methods for RuntimeExceptions
 public class ServiceException extends RuntimeException {

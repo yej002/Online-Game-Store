@@ -7,13 +7,19 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
-
+/**
+ * This class represents the Junit test and integration test for the user service class
+ */
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class UserServiceTests {
     @Autowired
     private IUserService iUserService;
 
+    /**
+     * Test for register user, result should be success, and data should be seen in database
+     * Otherwise, throw exception
+     */
     @Test
     public void reg() {
         try {
@@ -25,26 +31,34 @@ public class UserServiceTests {
             user.setEmail("user03@gmail.com");
             user.setAvatar("avatar.png");
             iUserService.reg(user);
-            System.out.println("Registration success!");
+            System.out.println("success.");
         } catch (ServiceException e) {
             System.out.println("Registration failed! " + e.getClass().getSimpleName());
             System.out.println(e.getMessage());
         }
     }
 
+    /**
+     * Test for login with username and password, result should be success.
+     * Otherwise, throw exception
+     */
     @Test
     public void login() {
         try {
             String username = "user03";
             String password = "123456";
             User user = iUserService.login(username, password);
-            System.out.println("Logging in！" + user);
+            System.out.println("Success.");
         } catch (ServiceException e) {
             System.out.println("Failed for login. " + e.getClass().getSimpleName());
             System.out.println(e.getMessage());
         }
     }
 
+    /**
+     * Test for change password for user, result should be success
+     * otherwise, throw exception
+     */
     @Test
     public void changePassword() {
         try {
@@ -53,13 +67,17 @@ public class UserServiceTests {
             String oldPassword = "123456";
             String newPassword = "888888";
             iUserService.changePassword(uid, username, oldPassword, newPassword);
-            System.out.println("Password updated！");
+            System.out.println("Success！");
         } catch (ServiceException e) {
             System.out.println("Password update failed！" + e.getClass().getSimpleName());
             System.out.println(e.getMessage());
         }
     }
 
+    /**
+     * Test for get user by user id, result should be the user matched
+     * Otherwise, throw exception
+     */
     @Test
     public void getByUid() {
         try {
@@ -72,6 +90,10 @@ public class UserServiceTests {
         }
     }
 
+    /**
+     * Test for change information for user, result should be success
+     * Otherwise, throw exception
+     */
     @Test
     public void changeInfo() {
         try {
@@ -82,13 +104,17 @@ public class UserServiceTests {
             user.setEmail("user@gmail.com");
             user.setGender(0);
             iUserService.changeInfo(uid, username, user);
-            System.out.println("Information updated!");
+            System.out.println("Success.");
         } catch (ServiceException e) {
             System.out.println("Information update failed！" + e.getClass().getSimpleName());
             System.out.println(e.getMessage());
         }
     }
 
+    /**
+     * Test for change avatar for user, result should be success
+     * Otherwise, throw exception
+     */
     @Test
     public void changeAvatar() {
         try {
@@ -96,7 +122,7 @@ public class UserServiceTests {
             String username = "user02";
             String avatar = "/upload/avatar.png";
             iUserService.changeAvatar(uid, username, avatar);
-            System.out.println("Avatar updated!");
+            System.out.println("Success.");
         } catch (ServiceException e) {
             System.out.println("Avatar update failed！" + e.getClass().getSimpleName());
             System.out.println(e.getMessage());

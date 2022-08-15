@@ -1,5 +1,8 @@
 package com.jing.storeweb.controller.exceptions;
 
+/**
+ * This class designed the File Empty exception and the returned massage
+ */
 public class FileEmptyException extends FileUploadException {
     public FileEmptyException() {
         super();

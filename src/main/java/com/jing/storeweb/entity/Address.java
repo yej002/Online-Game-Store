@@ -2,6 +2,9 @@ package com.jing.storeweb.entity;
 
 import java.io.Serializable;
 
+/**
+ * This class defined the entity of address, and the properties of the address
+ */
 public class Address extends BaseEntity implements Serializable {
     private Integer aid;
     private Integer uid;

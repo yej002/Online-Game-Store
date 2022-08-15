@@ -3,7 +3,9 @@ package com.jing.storeweb.service;
 import com.jing.storeweb.entity.Address;
 import java.util.List;
 
-/** This interface represents the services that address should have */
+/**
+ * This interface represents the methods of services that address should have
+ */
 
 public interface IAddressService {
     /**

@@ -1,7 +1,9 @@
 package com.jing.storeweb.entity;
 
 import java.io.Serializable;
-
+/**
+ * This class defined the entity of user, and the properties of user
+ */
 public class User extends BaseEntity implements Serializable {
     private Integer uid;
     private String username;

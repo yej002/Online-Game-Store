@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Game Shop</title>
+	<title>Game Store</title>
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
@@ -27,7 +27,7 @@
 	<body>
 		<header>
 			<nav class="navbar navbar-expand-md navbar-dark fixed-top">
-				<a class="navbar-brand font-weight-bold" href="index.html">Game Shop</a>
+				<a class="navbar-brand font-weight-bold" href="index.html">Game Store</a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
 						aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
@@ -183,99 +183,6 @@
 		<script type="text/javascript">
 			let defaultOption = '<option value="0"></option>';
 
-			$(document).ready(function() {
-				showStateList();
-				$("#city-list").append(defaultOption);
-			});
-
-			$("#State-list").change(function() {
-				showCityList();
-			});
-
-			$("#city-list").change(function() {
-				showAreaList();
-			});
-
-			function showStateList() {
-				$("#State-list").append(defaultOption);
-				$.ajax({
-					url: "/districts",
-					type: "GET",
-					data: "parent=86",
-					dataType: "JSON",
-					success: function(json) {
-						if (json.state == 200) {
-							let list = json.data;
-							console.log("count=" + list.length);
-							for (let i = 0; i < list.length; i++) {
-								console.log(list[i].name);
-								let option = '<option value="' + list[i].code + '">' + list[i].name + '</option>';
-								$("#State-list").append(option);
-							}
-						}
-					}
-				});
-			}
-
-			function showCityList() {
-				let parent = $("#State-list").val();
-				$("#city-list").empty();
-				$("#area-list").empty();
-
-				$("#city-list").append(defaultOption);
-				$("#area-list").append(defaultOption);
-
-				if (parent == 0) {
-					return;
-				}
-
-				$.ajax({
-					url: "/districts",
-					type: "GET",
-					data: "parent=" + parent,
-					dataType: "JSON",
-					success: function(json) {
-						if (json.state == 200) {
-							let list = json.data;
-							console.log("count=" + list.length);
-							for (let i = 0; i < list.length; i++) {
-								console.log(list[i].name);
-								let option = '<option value="' + list[i].code + '">' + list[i].name + '</option>';
-								$("#city-list").append(option);
-							}
-						}
-					}
-				});
-			}
-
-			function showAreaList() {
-				let parent = $("#city-list").val();
-				$("#area-list").empty();
-				$("#area-list").append(defaultOption);
-
-				if (parent == 0) {
-					return;
-				}
-
-				$.ajax({
-					url: "/districts",
-					type: "GET",
-					data: "parent=" + parent,
-					dataType: "JSON",
-					success: function(json) {
-						if (json.state == 200) {
-							let list = json.data;
-							console.log("count=" + list.length);
-							for (let i = 0; i < list.length; i++) {
-								console.log(list[i].name);
-								let option = '<option value="' + list[i].code + '">' + list[i].name + '</option>';
-								$("#area-list").append(option);
-							}
-						}
-					}
-				});
-			}
-			
 			$("#btn-add-new-address").click(function() {
 				$.ajax({
 					url: "/addresses/add_new_address",

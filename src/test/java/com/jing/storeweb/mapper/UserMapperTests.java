@@ -10,7 +10,9 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
-
+/**
+ * This class represents the Junit test and integration test for the user mapper class
+ */
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class UserMapperTests {
@@ -19,6 +21,9 @@ public class UserMapperTests {
     private UserMapper userMapper;
 
 
+    /**
+     * Test for insert user data in database, result should be 1, and data should be seen in MySQL database
+     */
     @Test
     public void insert() {
         User user = new User();
@@ -28,6 +33,9 @@ public class UserMapperTests {
         System.out.println("rows=" + rows);
     }
 
+    /**
+     * Test for find user by username, result should be the user matched
+     */
     @Test
     public void findByUsername() {
         String username = "user02";
@@ -35,16 +43,22 @@ public class UserMapperTests {
         System.out.println(result);
     }
 
+    /**
+     * Test for update user password by user id, result should be 1
+     */
     @Test
     public void updatePasswordByUid() {
         Integer uid = 7;
         String password = "654321";
-        String modifiedUser = "normal user";
+        String modifiedUser = "user";
         Date modifiedTime = new Date();
         Integer rows = userMapper.updatePasswordByUid(uid, password, modifiedUser, modifiedTime);
         System.out.println("rows=" + rows);
     }
 
+    /**
+     * Test for find user by user id, result should be the user matched
+     */
     @Test
     public void findByUid() {
         Integer uid = 7;
@@ -52,19 +66,25 @@ public class UserMapperTests {
         System.out.println(result);
     }
 
+    /**
+     * Test for updating user information, result should be 1, and information should be seen in database
+     */
     @Test
     public void updateInfoByUid() {
         User user = new User();
-        user.setUid(20);
+        user.setUid(5);
         user.setPhone("6125171234");
         user.setEmail("someuser@gmail.com");
         user.setGender(1);
-        user.setModifiedUser("system manager");
+        user.setModifiedUser("admin");
         user.setModifiedTime(new Date());
         Integer rows = userMapper.updateInfoByUid(user);
         System.out.println("rows=" + rows);
     }
 
+    /**
+     * Test for update avatar by user id, result should be 1, and path should be seen in database
+     */
     @Test
     public void updateAvatarByUid() {
         Integer uid = 20;

@@ -1,5 +1,7 @@
 package com.jing.storeweb.service.exceptions;
-
+/**
+ * This class defined the exception for password not match
+ */
 public class PasswordNotMatchException extends ServiceException {
     public PasswordNotMatchException() {
         super();

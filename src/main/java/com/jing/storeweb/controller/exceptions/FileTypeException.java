@@ -1,5 +1,8 @@
 package com.jing.storeweb.controller.exceptions;
 
+/**
+ * This class designed the File Type exception and the returned massage
+ */
 public class FileTypeException extends FileUploadException {
     public FileTypeException() {
         super();

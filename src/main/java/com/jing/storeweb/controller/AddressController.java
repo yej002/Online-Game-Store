@@ -12,12 +12,21 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.servlet.http.HttpSession;
 import java.util.List;
 
+/**
+ * This class defined the controller of the Address
+ * It takes the requests for address, and sends response to front-end
+ */
 @RestController
 @RequestMapping("addresses")
 public class AddressController extends BaseController {
     @Autowired
     private IAddressService addressService;
 
+    /**
+     * @param address address input from frontend
+     * @param session session that contains user information
+     * @return JsonResult that state success
+     */
     @RequestMapping("add_new_address")
     public JsonResult<Void> addNewAddress(Address address, HttpSession session) {
         // get user id and username from session
@@ -27,6 +36,10 @@ public class AddressController extends BaseController {
         return new JsonResult<>(OK);
     }
 
+    /**
+     * @param session Session that contains user information
+     * @return JsonResult that state ok and user data from backend
+     */
     @GetMapping({"", "/"})
     public JsonResult<List<Address>> getByUid(HttpSession session) {
         Integer uid = getUidFromSession(session);
@@ -34,6 +47,11 @@ public class AddressController extends BaseController {
         return new JsonResult<>(OK, data);
     }
 
+    /**
+     * @param aid address id
+     * @param session Session that contains user information
+     * @return JsonResult that state success
+     */
     @RequestMapping("{aid}/set_default")
     public JsonResult<Void> setDefault(@PathVariable("aid") Integer aid, HttpSession session) {
         Integer uid = getUidFromSession(session);
@@ -42,6 +60,11 @@ public class AddressController extends BaseController {
         return new JsonResult<>(OK);
     }
 
+    /**
+     * @param aid address id
+     * @param session Session that contains user information
+     * @return JsonResult that state success
+     */
     @RequestMapping("{aid}/delete")
     public JsonResult<Void> delete(@PathVariable("aid") Integer aid, HttpSession session) {
         Integer uid = getUidFromSession(session);

@@ -32,8 +32,8 @@ public interface CartMapper {
 
     /**
      * Return the shopping cart by user id and product id
-     * @param uid 用户id
-     * @param pid 商品id
+     * @param uid user id
+     * @param pid product id
      * @return the shopping cart by user id and product id
      */
     Cart findByUidAndPid(

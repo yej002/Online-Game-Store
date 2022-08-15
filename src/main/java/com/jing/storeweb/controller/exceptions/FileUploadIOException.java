@@ -1,5 +1,8 @@
 package com.jing.storeweb.controller.exceptions;
 
+/**
+ * This class designed the File upload IO exception and the returned massage
+ */
 public class FileUploadIOException extends FileUploadException {
     public FileUploadIOException() {
         super();

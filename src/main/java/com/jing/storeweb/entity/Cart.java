@@ -2,7 +2,9 @@ package com.jing.storeweb.entity;
 
 import java.io.Serializable;
 
-/** Concrete class for cart */
+/**
+ * This class defined the entity of cart, and the properties of cart
+ */
 public class Cart extends BaseEntity implements Serializable {
     private Integer cid;
     private Integer uid;

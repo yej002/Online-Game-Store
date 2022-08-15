@@ -10,12 +10,18 @@ import org.springframework.test.context.junit4.SpringRunner;
 import java.util.Date;
 import java.util.List;
 
+/**
+ * This class represents the Junit test and integration test for the address mapper class
+ */
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class AddressMapperTests {
     @Autowired
     private AddressMapper addressMapper;
 
+    /**
+     * Test for insert method for the address, data should be seen in MySQL database
+     */
     @Test
     public void insert() {
         Address address = new Address();
@@ -27,16 +33,11 @@ public class AddressMapperTests {
         address.setAddress("55 9th Street");
         Integer rows = addressMapper.insert(address);
         System.out.println("rows=" + rows);
-
-        Address address2 = new Address();
-        address2.setUid(3);
-        address2.setName("test1");
-        address2.setPhone("9377823333");
-        address2.setAddress("55 9th Street");
-        Integer rows2 = addressMapper.insert(address2);
-        System.out.println("rows=" + rows2);
     }
 
+    /**
+     * Test for count address by user id, result should be 1
+     */
     @Test
     public void countByUid() {
         Integer uid = 7;
@@ -44,6 +45,9 @@ public class AddressMapperTests {
         System.out.println("count=" + count);
     }
 
+    /**
+     * Test for find address list by user id, result should be the list of address
+     */
     @Test
     public void findByUid() {
         Integer uid = 7;
@@ -54,6 +58,9 @@ public class AddressMapperTests {
         }
     }
 
+    /**
+     * Test for update address to not default, result should be 1
+     */
     @Test
     public void updateNonDefaultByUid() {
         Integer uid = 7;
@@ -61,6 +68,9 @@ public class AddressMapperTests {
         System.out.println("rows=" + rows);
     }
 
+    /**
+     * Test for update address to default, result should be 1
+     */
     @Test
     public void updateDefaultByAid() {
         Integer aid = 1;
@@ -70,6 +80,9 @@ public class AddressMapperTests {
         System.out.println("rows=" + rows);
     }
 
+    /**
+     * Test for find address by address id, result should be the address matched
+     */
     @Test
     public void findByAid() {
         Integer aid = 1;
@@ -77,6 +90,9 @@ public class AddressMapperTests {
         System.out.println(result);
     }
 
+    /**
+     * Test for deleting address by address id, result should be 1
+     */
     @Test
     public void deleteByAid() {
         Integer aid = 1;
@@ -84,6 +100,9 @@ public class AddressMapperTests {
         System.out.println("rows=" + rows);
     }
 
+    /**
+     * Test for find last modified address by user id, result should be the address matched
+     */
     @Test
     public void findLastModified() {
         Integer uid = 7;

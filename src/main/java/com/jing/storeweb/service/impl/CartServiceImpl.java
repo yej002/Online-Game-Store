@@ -16,7 +16,9 @@ import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 
-/** This class implements the service methods from cart interface */
+/**
+ * This class implements the service methods from cart service interface
+ */
 @Service
 public class CartServiceImpl implements ICartService {
     @Autowired
@@ -24,6 +26,14 @@ public class CartServiceImpl implements ICartService {
     @Autowired
     private IProductService productService;
 
+
+    /**
+     * Add product to shopping cart
+     * @param uid user id
+     * @param pid product id
+     * @param amount number of product
+     * @param username username
+     */
     @Override
     public void addToCart(Integer uid, Integer pid, Integer amount, String username) {
         // find the product in cart by user id and product id
@@ -63,11 +73,25 @@ public class CartServiceImpl implements ICartService {
         }
     }
 
+
+    /**
+     * Find and return object(data) for shopping cart by user id
+     * @param uid user id
+     * @return The list of object in shopping cart
+     */
     @Override
     public List<CartVO> getVOByUid(Integer uid) {
         return cartMapper.findVOByUid(uid);
     }
 
+
+    /**
+     * Return the result of increment number of products in shopping cart
+     * @param cid cart id
+     * @param uid user id
+     * @param username username
+     * @return the result of increment number of products in shopping cart
+     */
     @Override
     public Integer addNum(Integer cid, Integer uid, String username) {
         Cart result = cartMapper.findByCid(cid);
@@ -90,6 +114,14 @@ public class CartServiceImpl implements ICartService {
         return num;
     }
 
+
+    /**
+     * Return the result of decrement number of products in shopping cart
+     * @param cid cart id
+     * @param uid user id
+     * @param username username
+     * @return the result of decrement number of products in shopping cart
+     */
     @Override
     public Integer reduceNum(Integer cid, Integer uid, String username) {
         Cart result = cartMapper.findByCid(cid);
@@ -112,6 +144,13 @@ public class CartServiceImpl implements ICartService {
         return num;
     }
 
+
+    /**
+     * Find and return value object(data) for shopping carts by multiple cart ids
+     * @param uid user id
+     * @param cids a list of cart ids
+     * @return return a list of object(data) for shopping carts
+     */
     @Override
     // use iterator design from the class CS5004
     public List<CartVO> getVOByCids(Integer uid, Integer[] cids) {

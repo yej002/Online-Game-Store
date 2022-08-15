@@ -1,5 +1,8 @@
 package com.jing.storeweb.service.exceptions;
 
+/**
+ * This class defined the exception for not found the address
+ */
 public class AddressNotFoundException extends ServiceException {
     public AddressNotFoundException() {
         super();

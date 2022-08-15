@@ -4,26 +4,27 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Game Shop</title>
+	<title>Game Store</title>
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
-
+	<script src="../bootstrap3/js/holder.js"></script>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
 		  integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="../bootstrap3/css/bootstrap.css">
 
 	<script src="../bootstrap3/jquery-1.8.3.min.js"></script>
 	<script src="../bootstrap3/js/bootstrap.js"></script>
+	<script src="../bootstrap3/js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
 
-		<link rel="stylesheet" href="../bootstrap3/font-awesome-4.7.0/css/font-awesome.css" />
-		<link rel="stylesheet" type="text/css" href="../css/layout.css" />
-		<link rel="stylesheet" type="text/css" href="../bootstrap3/css/bootstrap.css">
+	<link rel="stylesheet" href="../bootstrap3/font-awesome-4.7.0/css/font-awesome.css" />
+	<link rel="stylesheet" type="text/css" href="../css/layout.css" />
 
-		<script src="../js/adddel.js" type="text/javascript" charset="utf-8"></script>
+
 	</head>
 
 	<body>
 	<header>
 		<nav class="navbar navbar-expand-md navbar-dark fixed-top">
-			<a class="navbar-brand font-weight-bold" href="index.html">Game Shop</a>
+			<a class="navbar-brand font-weight-bold" href="index.html">Game Store</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
 					aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
@@ -188,9 +189,9 @@
 									+ '<td>#{name}</td>'
 									+ '<td>#{state} #{city} #{address}</td>'
 									+ '<td>#{phone}</td>'
-									+ '<td><a class="btn btn-xs btn-info"><span class="fa fa-edit"></span> 修改</a></td>'
-									+ '<td><a onclick="deleteByAid(#{aid})" class="btn btn-xs add-del btn-info"><span class="fa fa-trash-o"></span> 删除</a></td>'
-									+ '<td><a onclick="setDefault(#{aid})" class="btn btn-xs add-def btn-default">设为默认</a></td>'
+									+ '<td><a class="btn btn-xs btn-info"><span class="fa fa-edit"></span> Update</a></td>'
+									+ '<td><a onclick="deleteByAid(#{aid})" class="btn btn-xs add-del btn-info"><span class="fa fa-trash-o"></span> Delete</a></td>'
+									+ '<td><a onclick="setDefault(#{aid})" class="btn btn-xs add-def btn-default">Set Default</a></td>'
 								+ '</tr>';
 
 							address = address.replace(/#{aid}/g, list[i].aid);
@@ -216,11 +217,11 @@
 						if (json.state == 200) {
 							showAddressList();
 						} else {
-							alert("设置默认收货地址失败！" + json.message);
+							alert("Failed to update your address to default！" + json.message);
 						}
 					},
 					error: function(json) {
-						alert("您的登录信息已经过期，请重新登录！HTTP响应码：" + json.status);
+						alert("Error! Please login and try again later. " + json.status);
 						location.href = "login.html";
 					}
 				});
@@ -235,11 +236,11 @@
 						if (json.state == 200) {
 							showAddressList();
 						} else {
-							alert("删除收货地址失败！" + json.message);
+							alert("Failed to delete the address." + json.message);
 						}
 					},
 					error: function(xhr) {
-						alert("您的登录信息已经过期，请重新登录！HTTP响应码：" + xhr.status);
+						alert("Error! Please login and try again later. " + xhr.status);
 						location.href = "login.html";
 					}
 				});

@@ -2,7 +2,9 @@ package com.jing.storeweb.service;
 
 import com.jing.storeweb.entity.User;
 
-/** this interface represents the services that user should have */
+/**
+ * This interface represents the methods of services that user should have
+ */
 public interface IUserService {
     /**
      * user registration

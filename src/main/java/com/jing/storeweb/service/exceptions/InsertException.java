@@ -1,5 +1,7 @@
 package com.jing.storeweb.service.exceptions;
-
+/**
+ * This class defined the exception for failed of insertion
+ */
 public class InsertException extends ServiceException {
 
     public InsertException() {

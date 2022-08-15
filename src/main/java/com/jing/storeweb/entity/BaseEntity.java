@@ -2,7 +2,9 @@ package com.jing.storeweb.entity;
 
 import java.io.Serializable;
 import java.util.Date;
-
+/**
+ * This class defined the common elements of entity, and the properties of the entity
+ */
 // abstract class for other concrete classes
 public class BaseEntity implements Serializable {
     private String createdUser;

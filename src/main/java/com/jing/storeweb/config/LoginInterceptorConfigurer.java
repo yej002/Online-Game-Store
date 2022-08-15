@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /** This class defined web address that no need to go through login interceptor
- *  In other words, no need to log in to make action.
+ *  In other words, no need to log in to view the page.
  */
 @Configuration
 public class LoginInterceptorConfigurer implements WebMvcConfigurer {

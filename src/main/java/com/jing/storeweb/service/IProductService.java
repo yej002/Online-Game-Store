@@ -4,11 +4,13 @@ import com.jing.storeweb.entity.Product;
 
 import java.util.List;
 
-/** This interface represents the services that product should have. */
+/**
+ * This interface represents the methods of services that product should have
+ */
 public interface IProductService {
     /**
-     * Return the list of most popular 4 products
-     * @return the list of most popular 4 products
+     * Return the list of most popular 6 products
+     * @return the list of most popular 6 products
      */
     List<Product> findHotList();
 

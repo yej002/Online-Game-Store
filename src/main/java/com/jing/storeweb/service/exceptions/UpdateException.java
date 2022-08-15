@@ -1,5 +1,7 @@
 package com.jing.storeweb.service.exceptions;
-
+/**
+ * This class defined the exception for failed of update
+ */
 public class UpdateException extends ServiceException {
     public UpdateException() {
         super();

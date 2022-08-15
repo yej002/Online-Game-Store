@@ -1,5 +1,8 @@
 package com.jing.storeweb.controller.exceptions;
 
+/**
+ * This class designed the File State exception and the returned massage
+ */
 public class FileStateException extends FileUploadException {
     public FileStateException() {
         super();

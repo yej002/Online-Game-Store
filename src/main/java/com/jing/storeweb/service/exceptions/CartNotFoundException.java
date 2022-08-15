@@ -1,5 +1,7 @@
 package com.jing.storeweb.service.exceptions;
-
+/**
+ * This class defined the exception for not found the cart
+ */
 public class CartNotFoundException extends ServiceException {
     public CartNotFoundException() {
         super();

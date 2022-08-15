@@ -1,5 +1,7 @@
 package com.jing.storeweb.service.exceptions;
-
+/**
+ * This class defined the exception for user not found
+ */
 public class UserNotFoundException extends ServiceException {
     public UserNotFoundException() {
         super();

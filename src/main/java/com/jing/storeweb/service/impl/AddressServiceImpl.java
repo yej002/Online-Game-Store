@@ -13,7 +13,7 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * this class implements the services for address
+ * This class implements the service methods from address service interface
  */
 @Service
 public class AddressServiceImpl implements IAddressService {
@@ -25,7 +25,12 @@ public class AddressServiceImpl implements IAddressService {
     // defined in application properties
     @Value("${user.address.max-count}")
     private int maxCount;
-
+    /**
+     * Create a new address
+     * @param uid user id
+     * @param username username
+     * @param address address
+     */
     @Override
     public void addNewAddress(Integer uid, String username, Address address) {
         // count the number of address by user id
@@ -34,7 +39,6 @@ public class AddressServiceImpl implements IAddressService {
         if (count > maxCount) {
             throw new AddressCountLimitException("The number of address cannot exceeds (" + maxCount + ")！");
         }
-
         address.setUid(uid);
         // 0-not default，1-default
         Integer isDefault = count == 0 ? 1 : 0;
@@ -52,12 +56,25 @@ public class AddressServiceImpl implements IAddressService {
         }
     }
 
+
+    /**
+     * Return the list of address for user by user id
+     * @param uid user id
+     * @return list of address
+     */
     @Override
     public List<Address> getByUid(Integer uid) {
         List<Address> list = addressMapper.findByUid(uid);
         return list;
     }
 
+
+    /**
+     * Set the address to default
+     * @param aid address id
+     * @param uid user id
+     * @param username username
+     */
     @Transactional
     @Override
     public void setDefault(Integer aid, Integer uid, String username) {
@@ -88,6 +105,13 @@ public class AddressServiceImpl implements IAddressService {
         }
     }
 
+
+    /**
+     * Delete the address
+     * @param aid address id
+     * @param uid user id
+     * @param username username
+     */
     @Transactional
     @Override
     public void delete(Integer aid, Integer uid, String username) {
@@ -133,6 +157,13 @@ public class AddressServiceImpl implements IAddressService {
         }
     }
 
+
+    /**
+     * Return the detailed address by address id
+     * @param aid address id
+     * @param uid user id
+     * @return the detailed address by address id
+     */
     @Override
     public Address getByAid(Integer aid, Integer uid) {
         // get the address by address id

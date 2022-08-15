@@ -9,18 +9,24 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.List;
-
+/**
+ * This class represents the Junit test and integration test for the cart service class
+ */
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class CartServiceTests {
     @Autowired
     private ICartService cartService;
 
+    /**
+     * Test for add product to shopping cart, result should be Success.
+     * otherwise, throw exception
+     */
     @Test
     public void addToCart() {
         try {
             Integer uid = 2;
-            Integer pid = 10000012;
+            Integer pid = 10000002;
             Integer amount = 5;
             String username = "User02";
             cartService.addToCart(uid, pid, amount, username);
@@ -31,6 +37,9 @@ public class CartServiceTests {
         }
     }
 
+    /**
+     * Test for get value object by user id, result should be list of value objects from cart
+     */
     @Test
     public void getVOByUid() {
         List<CartVO> list = cartService.getVOByUid(2);
@@ -40,6 +49,10 @@ public class CartServiceTests {
         }
     }
 
+    /**
+     * Test for add product number in cart, result should be Success.
+     * Otherwise, throw exception
+     */
     @Test
     public void addNum() {
         try {
@@ -47,13 +60,16 @@ public class CartServiceTests {
             Integer uid = 2;
             String username = "user02";
             Integer num = cartService.addNum(cid, uid, username);
-            System.out.println("Your item updated to " + num);
+            System.out.println("Success. ");
         } catch (ServiceException e) {
             System.out.println(e.getClass().getSimpleName());
             System.out.println(e.getMessage());
         }
     }
 
+    /**
+     * Test for get value objects by multiple cart ids, result should be total number of items in list
+     */
     @Test
     public void getVOByCids() {
         Integer[] cids = {1, 2, 3};

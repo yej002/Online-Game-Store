@@ -1,5 +1,8 @@
 package com.jing.storeweb.controller.exceptions;
 
+/**
+ * This class designed the File Size exception and the returned massage
+ */
 public class FileSizeException extends FileUploadException {
     public FileSizeException() {
         super();

@@ -1,5 +1,8 @@
 package com.jing.storeweb.service.exceptions;
 
+/**
+ * This class defined the exception for failed of deletion
+ */
 public class DeleteException extends ServiceException {
     public DeleteException() {
         super();

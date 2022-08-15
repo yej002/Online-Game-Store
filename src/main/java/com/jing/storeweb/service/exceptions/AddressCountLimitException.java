@@ -1,7 +1,7 @@
 package com.jing.storeweb.service.exceptions;
 
 /**
- * Exception that address count exceeds the limit(20).
+ * This class defined the Exception that address count exceeds the limit(20).
  */
 public class AddressCountLimitException extends ServiceException {
     public AddressCountLimitException() {

@@ -9,13 +9,19 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.List;
-
+/**
+ * This class represents the Junit test and integration test for the product service class
+ */
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class ProductServiceTests {
     @Autowired
     private IProductService productService;
 
+    /**
+     * Test for find top 6 priority products, result should be the products sorted by priority
+     * Otherwise, throw exception
+     */
     @Test
     public void findHotList() {
         try {
@@ -30,10 +36,14 @@ public class ProductServiceTests {
         }
     }
 
+    /**
+     * Test for ind product by id, result should be the product matched
+     * Otherwise, throw exception
+     */
     @Test
     public void findById() {
         try {
-            Integer id = 100000012;
+            Integer id = 1000002;
             Product result = productService.findById(id);
             System.out.println(result);
         } catch (ServiceException e) {

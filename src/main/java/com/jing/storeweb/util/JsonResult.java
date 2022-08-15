@@ -20,12 +20,13 @@ public class JsonResult<E> implements Serializable {
         this.state = state;
     }
 
-    /** If exception exist, get the exception message */
+    //If exception exist, get the exception message
     public JsonResult(Throwable e) {
         super();
         this.message = e.getMessage();
     }
 
+    // get status and data from controller
     public JsonResult(Integer state, E data) {
         super();
         this.state = state;

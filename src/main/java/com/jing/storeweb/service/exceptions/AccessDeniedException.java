@@ -1,5 +1,8 @@
 package com.jing.storeweb.service.exceptions;
 
+/**
+ * This class defined the exception for Access Denied
+ */
 public class AccessDeniedException extends ServiceException {
     public AccessDeniedException() {
         super();

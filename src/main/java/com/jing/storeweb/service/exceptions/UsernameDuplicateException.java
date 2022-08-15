@@ -1,5 +1,7 @@
 package com.jing.storeweb.service.exceptions;
-
+/**
+ * This class defined the exception for username duplication
+ */
 public class UsernameDuplicateException extends ServiceException {
     public UsernameDuplicateException() {
         super();

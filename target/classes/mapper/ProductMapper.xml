@@ -22,7 +22,7 @@
         WHERE
             status=1
         ORDER BY
-            priority DESC
+            priority ASC
             LIMIT 0,6
     </select>
 

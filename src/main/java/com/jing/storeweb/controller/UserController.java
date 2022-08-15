@@ -17,13 +17,19 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
-/** this class takes the requests from user, and sends response to front-end */
+/** This class defined the controller of user
+ * It takes the requests from user, and sends response to front-end
+ */
 @RestController
 @RequestMapping("users")
 public class UserController extends BaseController {
     @Autowired
     private IUserService userService;
 
+    /**
+     * @param user user
+     * @return JsonResult contains status of success for register
+     */
     @RequestMapping("reg")
     public JsonResult<Void> reg(User user) {
         userService.reg(user);
@@ -31,6 +37,12 @@ public class UserController extends BaseController {
     }
 
 
+    /**
+     * @param username username
+     * @param password user password
+     * @param session session that contains the user information
+     * @return the data for user and status of success for login
+     */
     @RequestMapping("login")
     // use session to save the data in server that can be accessed
     public JsonResult<User> login(String username, String password, HttpSession session) {
@@ -41,6 +53,12 @@ public class UserController extends BaseController {
         return new JsonResult<>(OK, data);
     }
 
+    /**
+     * @param oldPassword user old password
+     * @param newPassword user new password
+     * @param session session that contains user information
+     * @return JsonResult that contains status of success for password changing
+     */
     @RequestMapping("change_password")
     public JsonResult<Void> changePassword(String oldPassword, String newPassword, HttpSession session) {
         Integer uid = getUidFromSession(session);
@@ -49,6 +67,10 @@ public class UserController extends BaseController {
         return new JsonResult<>(OK);
     }
 
+    /**
+     * @param session session that contains user information
+     * @return JsonResult that contains user data and status of success
+     */
     // use AJAX to fill out information to front-end
     @GetMapping("get_by_uid")
     public JsonResult<User> getByUid(HttpSession session) {
@@ -57,6 +79,11 @@ public class UserController extends BaseController {
         return new JsonResult<>(OK, data);
     }
 
+    /**
+     * @param user user
+     * @param session session that contains user information
+     * @return JsonResult that contains status of success for updating information
+     */
     @RequestMapping("change_info")
     public JsonResult<Void> changeInfo(User user, HttpSession session) {
         Integer uid = getUidFromSession(session);
@@ -77,24 +104,26 @@ public class UserController extends BaseController {
         AVATAR_TYPES.add("image/gif");
     }
 
+    /**
+     * @param file uploaded file for avatar
+     * @param session session that contains user information
+     * @return JsonResult that contains avatar and the status of success for change avatar
+     */
     @PostMapping("change_avatar")
     public JsonResult<String> changeAvatar(@RequestParam("file") MultipartFile file, HttpSession session) {
         // check if the file is empty
         if (file.isEmpty()) {
             throw new FileEmptyException("File cannot be empty.");
         }
-
         // check if the file is valid size
         if (file.getSize() > AVATAR_MAX_SIZE) {
             throw new FileSizeException("Size cannot exceed " + (AVATAR_MAX_SIZE / 1024) + "KB.");
         }
-
         // check if the file is valid type
         String contentType = file.getContentType();
         if (!AVATAR_TYPES.contains(contentType)) {
             throw new FileTypeException("Not supported type, please upload " + AVATAR_TYPES);
         }
-
         // read the avatar path and upload it
         String parent = session.getServletContext().getRealPath("upload");
         System.out.println(parent);
@@ -112,13 +141,12 @@ public class UserController extends BaseController {
         // create a new file to save avatar
         File dest = new File(dir, filename);
         try {
-            file.transferTo(dest); // provided by MultipartFile,write file into dest
+            file.transferTo(dest); // provided by MultipartFile,write file into destination
         } catch (IllegalStateException e) {
             throw new FileStateException("Unable to access the file.");
         } catch (IOException e) {
             throw new FileUploadIOException("Unable to upload the file.");
         }
-
         // path of avatar
         String avatar = "/upload/" + filename;
         // get username and user id

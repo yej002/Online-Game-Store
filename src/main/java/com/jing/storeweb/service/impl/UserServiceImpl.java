@@ -11,12 +11,19 @@ import org.springframework.util.DigestUtils;
 
 import java.util.Date;
 
-/** This class implements the services provided to user */
+/**
+ * This class implements the service methods from user service interface
+ */
 @Service
 public class UserServiceImpl implements IUserService {
     @Autowired
     private UserMapper userMapper;
 
+
+    /**
+     * user registration
+     * @param user user
+     */
     @Override
     public void reg(User user) {
         // get the username from user
@@ -28,7 +35,6 @@ public class UserServiceImpl implements IUserService {
             // if result != null, means data exists, throw UsernameDuplicateException
             throw new UsernameDuplicateException("The username of [" + username + "] is already used.");
         }
-
         // make a creation time for the user
         Date now = new Date();
         // generate a random unique id to encoding password
@@ -43,8 +49,6 @@ public class UserServiceImpl implements IUserService {
         user.setCreatedTime(now);
         user.setModifiedUser(username);
         user.setModifiedTime(now);
-
-
         // check if insert data successful by check the lines it affected to database
         Integer rows = userMapper.insert(user);
         // insert method should have affection of 1 line
@@ -73,6 +77,13 @@ public class UserServiceImpl implements IUserService {
         return password;
     }
 
+
+    /**
+     * user log in
+     * @param username username
+     * @param password password
+     * @return matched user
+     */
     @Override
     public User login(String username, String password) {
         // get the user's information/data from database by username
@@ -81,7 +92,6 @@ public class UserServiceImpl implements IUserService {
         if (result == null || result.getIsDelete().equals(1)) {
             throw new UserNotFoundException("User is not found.");
         }
-
         // get the salt from database, and encoding the password that entered by user
         String salt = result.getSalt();
         String md5Password = getMd5Password(password, salt);
@@ -89,7 +99,6 @@ public class UserServiceImpl implements IUserService {
         if (!result.getPassword().equals(md5Password)) {
             throw new PasswordNotMatchException("The username or password is not match.");
         }
-
         User user = new User();
         // give information which taken from database to user
         user.setUid(result.getUid());
@@ -98,6 +107,14 @@ public class UserServiceImpl implements IUserService {
         return user;
     }
 
+
+    /**
+     * change password
+     * @param uid user id
+     * @param username username
+     * @param oldPassword original password
+     * @param newPassword new password
+     */
     @Override
     public void changePassword(Integer uid, String username, String oldPassword, String newPassword) {
         User result = userMapper.findByUid(uid);
@@ -105,7 +122,6 @@ public class UserServiceImpl implements IUserService {
         if (result == null || result.getIsDelete().equals(1)) {
             throw new UserNotFoundException("User is not found.");
         }
-
         // get the salt from database, and encoding the old password and new password
         String salt = result.getSalt();
         // encoding old password to verify with database
@@ -114,7 +130,6 @@ public class UserServiceImpl implements IUserService {
         if (!result.getPassword().contentEquals(oldMd5Password)) {
             throw new PasswordNotMatchException("Password is not match.");
         }
-
         // encoding new password and put it into database
         String newMd5Password = getMd5Password(newPassword, salt);
         Date now = new Date();
@@ -125,6 +140,12 @@ public class UserServiceImpl implements IUserService {
         }
     }
 
+
+    /**
+     * get matched user information/data by user id
+     * @param uid user id
+     * @return matched user
+     */
     @Override
     public User getByUid(Integer uid) {
         // get information/data by user id
@@ -133,7 +154,6 @@ public class UserServiceImpl implements IUserService {
         if (result == null || result.getIsDelete().equals(1)) {
             throw new UserNotFoundException("User is not found.");
         }
-
         User user = new User();
         // give information which taken from database to user
         user.setUsername(result.getUsername());
@@ -143,6 +163,12 @@ public class UserServiceImpl implements IUserService {
         return user;
     }
 
+    /**
+     * change user information
+     * @param uid user id
+     * @param username username
+     * @param user user object
+     */
     @Override
     public void changeInfo(Integer uid, String username, User user) {
         // get information/data by user id
@@ -151,7 +177,6 @@ public class UserServiceImpl implements IUserService {
         if (result == null || result.getIsDelete().equals(1)) {
             throw new UserNotFoundException("User is not found.");
         }
-
         user.setUid(uid);
         user.setModifiedUser(username);
         user.setModifiedTime(new Date());
@@ -162,6 +187,12 @@ public class UserServiceImpl implements IUserService {
         }
     }
 
+    /**
+     * change user avatar
+     * @param uid user id
+     * @param username username
+     * @param avatar path for the new avatar
+     */
     @Override
     public void changeAvatar(Integer uid, String username, String avatar) {
         // get information/data by user id
@@ -170,7 +201,6 @@ public class UserServiceImpl implements IUserService {
         if (result == null || result.getIsDelete().equals(1)) {
             throw new UserNotFoundException("User is not found.");
         }
-
         Date now = new Date();
         Integer rows = userMapper.updateAvatarByUid(uid, avatar, username, now);
         // check if the update success, affected line should be 1

@@ -1,5 +1,7 @@
 package com.jing.storeweb.service.exceptions;
-
+/**
+ * This class defined the exception for product not found
+ */
 public class ProductNotFoundException extends ServiceException {
     public ProductNotFoundException() {
         super();

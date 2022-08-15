@@ -2,7 +2,9 @@ package com.jing.storeweb.entity;
 
 import java.io.Serializable;
 
-/** Concrete class for product */
+/**
+ * This class defined the entity of product, and the properties of product
+ */
 public class Product extends BaseEntity implements Serializable {
     private Integer id;
     private Integer categoryId;

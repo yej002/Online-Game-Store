@@ -4,7 +4,9 @@ import com.jing.storeweb.vo.CartVO;
 
 import java.util.List;
 
-/** This interface represents the services that shopping cart should have */
+/**
+ * This interface represents the methods of services that shopping cart should have
+ */
 public interface ICartService {
     /**
      * Add product to shopping cart

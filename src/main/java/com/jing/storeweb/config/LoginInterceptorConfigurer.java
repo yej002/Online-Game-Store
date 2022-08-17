@@ -9,15 +9,16 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import java.util.ArrayList;
 import java.util.List;
 
-/** This class defined web address that no need to go through login interceptor
- *  In other words, no need to log in to view the page.
+/**
+ * This class defined web address that no need to go through login interceptor
+ * In other words, no need to log in to view the page.
  */
 @Configuration
 public class LoginInterceptorConfigurer implements WebMvcConfigurer {
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         HandlerInterceptor interceptor = new LoginInterceptor();
-    // list the address that should not be blocked if not logged in
+        // list the address that should not be blocked if not logged in
         List<String> patterns = new ArrayList<>();
         patterns.add("/bootstrap3/**");
         patterns.add("/css/**");

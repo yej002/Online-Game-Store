@@ -1,6 +1,5 @@
 package com.jing.storeweb.service.impl;
 
-import java.util.UUID;
 import com.jing.storeweb.entity.User;
 import com.jing.storeweb.mapper.UserMapper;
 import com.jing.storeweb.service.IUserService;
@@ -10,6 +9,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.DigestUtils;
 
 import java.util.Date;
+import java.util.UUID;
 
 /**
  * This class implements the service methods from user service interface
@@ -22,6 +22,7 @@ public class UserServiceImpl implements IUserService {
 
     /**
      * user registration
+     *
      * @param user user
      */
     @Override
@@ -59,8 +60,9 @@ public class UserServiceImpl implements IUserService {
 
     /**
      * encoding the password
+     *
      * @param password original password
-     * @param salt encoding key
+     * @param salt     encoding key
      * @return password after encoding
      */
     private String getMd5Password(String password, String salt) {
@@ -80,6 +82,7 @@ public class UserServiceImpl implements IUserService {
 
     /**
      * user log in
+     *
      * @param username username
      * @param password password
      * @return matched user
@@ -110,8 +113,9 @@ public class UserServiceImpl implements IUserService {
 
     /**
      * change password
-     * @param uid user id
-     * @param username username
+     *
+     * @param uid         user id
+     * @param username    username
      * @param oldPassword original password
      * @param newPassword new password
      */
@@ -143,6 +147,7 @@ public class UserServiceImpl implements IUserService {
 
     /**
      * get matched user information/data by user id
+     *
      * @param uid user id
      * @return matched user
      */
@@ -165,9 +170,10 @@ public class UserServiceImpl implements IUserService {
 
     /**
      * change user information
-     * @param uid user id
+     *
+     * @param uid      user id
      * @param username username
-     * @param user user object
+     * @param user     user object
      */
     @Override
     public void changeInfo(Integer uid, String username, User user) {
@@ -189,9 +195,10 @@ public class UserServiceImpl implements IUserService {
 
     /**
      * change user avatar
-     * @param uid user id
+     *
+     * @param uid      user id
      * @param username username
-     * @param avatar path for the new avatar
+     * @param avatar   path for the new avatar
      */
     @Override
     public void changeAvatar(Integer uid, String username, String avatar) {

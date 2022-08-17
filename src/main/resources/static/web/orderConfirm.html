@@ -2,225 +2,228 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Game Store</title>
-	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Store</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
 
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-		  integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-	<script src="../bootstrap3/jquery-1.8.3.min.js"></script>
-	<script src="../bootstrap3/js/bootstrap.js"></script>
+    <script src="../bootstrap3/jquery-1.8.3.min.js"></script>
+    <script src="../bootstrap3/js/bootstrap.js"></script>
 
-	<link rel="stylesheet" href="../bootstrap3/font-awesome-4.7.0/css/font-awesome.css" />
-	<link rel="stylesheet" href="../css/orderConfirm.css">
-	<link rel="stylesheet" type="text/css" href="../css/layout.css" />
-	<link rel="stylesheet" type="text/css" href="../bootstrap3/css/bootstrap.css">
+    <link rel="stylesheet" href="../bootstrap3/font-awesome-4.7.0/css/font-awesome.css"/>
+    <link rel="stylesheet" href="../css/orderConfirm.css">
+    <link rel="stylesheet" type="text/css" href="../css/layout.css"/>
+    <link rel="stylesheet" type="text/css" href="../bootstrap3/css/bootstrap.css">
 
 
 </head>
 
-	<body>
-	<header>
-		<nav class="navbar navbar-expand-md navbar-dark fixed-top">
-			<a class="navbar-brand font-weight-bold" href="index.html">Game Store</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
-					aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarCollapse">
-				<ul class="navbar-nav mr-auto">
-					<li class="nav-item active">
-						<a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-					</li>
-					<form class="form-inline mt-2 mt-md-0">
-						<input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-						<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-					</form>
-					<li class="nav-item">
-						<a class="nav-link" href="#"><span class="fa fa-heart"></span> Favorite</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#"><span class="fa fa-file-text"></span> Order History</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="cart.html"><span class="fa fa-cart-plus"></span> Cart</a>
-					</li>
+<body>
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+        <a class="navbar-brand font-weight-bold" href="index.html">Game Store</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <form class="form-inline mt-2 mt-md-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><span class="fa fa-heart"></span> Favorite</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><span class="fa fa-file-text"></span> Order History</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="cart.html"><span class="fa fa-cart-plus"></span> Cart</a>
+                </li>
 
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#"
-						   id="navbarDropdownMenuLink" role="button"
-						   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							<span class="fa fa-gears"></span> Change Info
-						</a>
-						<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-							<a class="dropdown-item" href="password.html">Change Password</a>
-							<a class="dropdown-item" href="userdata.html">Change Contact Info</a>
-							<a class="dropdown-item" href="upload.html">Change Avatar</a>
-							<a class="dropdown-item" href="address.html">Change Address</a>
-						</div>
-					</li>
-					<li class="nav-item">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#"
+                       id="navbarDropdownMenuLink" role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="fa fa-gears"></span> Change Info
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="password.html">Change Password</a>
+                        <a class="dropdown-item" href="userdata.html">Change Contact Info</a>
+                        <a class="dropdown-item" href="upload.html">Change Avatar</a>
+                        <a class="dropdown-item" href="address.html">Change Address</a>
+                    </div>
+                </li>
+                <li class="nav-item">
 
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="login.html"><span class="fa fa-user"></span> Logout</a>
-					</li>
-				</ul>
-			</div>
-		</nav>
-	</header>
-	<div>
-		<img src="../images/index/logo1.png">
-	</div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html"><span class="fa fa-user"></span> Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<div>
+    <img src="../images/index/logo1.png">
+</div>
 
-		<div class="container">
-			<div class="col-md-offset-1 col-md-10">
-				<div class="col-md-4">
-					<div class="col-md-12 order-bar-active">
-						1.Confirm Order Information
-						<span class="pull-right"><span class="fa fa-chevron-right"></span></span>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="col-md-12 order-bar-undo">
-						2.Pay Online
-						<span class="pull-right"><span class="fa fa-chevron-right"></span></span>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="col-md-12 order-bar-undo">
-						3.Payment Success
-					</div>
-				</div>
-				<div class="col-md-12">
-					<form id="form-create-order" role="form">
-						<div class="form-group">
-							<label for="name">
-								<p>Select Your Shipping Address：</p>
-							</label>
-							<select name="aid" id="address-list" class="form-control">
-								<option>Jing&nbsp;&nbsp;&nbsp;55 9th Street&nbsp;&nbsp;&nbsp;9371231234</option>
-								<option>Jing&nbsp;&nbsp;&nbsp;55 9th Street&nbsp;&nbsp;&nbsp;9371231234</option>
-								<option>Jing&nbsp;&nbsp;&nbsp;55 9th Street&nbsp;&nbsp;&nbsp;9371231234</option>
-							</select>
-						</div>
-						<div class="panel panel-primary">
-							<div class="panel-heading">
-								<p class="panel-title">Order Information：</p>
-							</div>
-							<div class="panel-body">
-								<table class="cart-table" width="100%">
-									<thead>
-										<tr>
-											<th width="15%"></th>
-											<th width="35%">Item</th>
-											<th width="15%">Price</th>
-											<th width="15%">Amount</th>
-											<th width="20%">Total Price</th>
-										</tr>
-									</thead>
-									<tbody id="cart-list" class="cart-body">
-										<tr>
-											<td><img class="img-fluid" src="../images/portal/5NBA-2K23-Championship-Edition--PlayStation-5/collect.jpeg" alt="Responsive image"></td>
-											<td>God of War Ragnarok Launch Edition - PlayStation 5</td>
-											<td>$<span>0</span></td>
-											<td>0</td>
-											<td><span>0</span></td>
-										</tr>
-									</tbody>
-								</table>
-								<div class="total-bar">
+<div class="container">
+    <div class="col-md-offset-1 col-md-10">
+        <div class="col-md-4">
+            <div class="col-md-12 order-bar-active">
+                1.Confirm Order Information
+                <span class="pull-right"><span class="fa fa-chevron-right"></span></span>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="col-md-12 order-bar-undo">
+                2.Pay Online
+                <span class="pull-right"><span class="fa fa-chevron-right"></span></span>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="col-md-12 order-bar-undo">
+                3.Payment Success
+            </div>
+        </div>
+        <div class="col-md-12">
+            <form id="form-create-order" role="form">
+                <div class="form-group">
+                    <label for="name">
+                        <p>Select Your Shipping Address：</p>
+                    </label>
+                    <select name="aid" id="address-list" class="form-control">
+                        <option>Jing&nbsp;&nbsp;&nbsp;55 9th Street&nbsp;&nbsp;&nbsp;9371231234</option>
+                        <option>Jing&nbsp;&nbsp;&nbsp;55 9th Street&nbsp;&nbsp;&nbsp;9371231234</option>
+                        <option>Jing&nbsp;&nbsp;&nbsp;55 9th Street&nbsp;&nbsp;&nbsp;9371231234</option>
+                    </select>
+                </div>
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <p class="panel-title">Order Information：</p>
+                    </div>
+                    <div class="panel-body">
+                        <table class="cart-table" width="100%">
+                            <thead>
+                            <tr>
+                                <th width="15%"></th>
+                                <th width="35%">Item</th>
+                                <th width="15%">Price</th>
+                                <th width="15%">Amount</th>
+                                <th width="20%">Total Price</th>
+                            </tr>
+                            </thead>
+                            <tbody id="cart-list" class="cart-body">
+                            <tr>
+                                <td><img class="img-fluid"
+                                         src="../images/portal/5NBA-2K23-Championship-Edition--PlayStation-5/collect.jpeg"
+                                         alt="Responsive image"></td>
+                                <td>God of War Ragnarok Launch Edition - PlayStation 5</td>
+                                <td>$<span>0</span></td>
+                                <td>0</td>
+                                <td><span>0</span></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <div class="total-bar">
 									<span class="pull-right">Total Items
 										<span id="all-count">0</span> Total $
 										<span id="all-price">0</span>
 									</span>
-								</div>
-							</div>
-						</div>
-						<div class="pay-bar">
-							<a href="cart.html">Back</a>
-							<span class="pull-right"><input id="btn-create-order" type="button" value="Pay Online" class="btn btn-primary link-pay"/></span>
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pay-bar">
+                    <a href="cart.html">Back</a>
+                    <span class="pull-right"><input id="btn-create-order" type="button" value="Pay Online"
+                                                    class="btn btn-primary link-pay"/></span>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 
-		<script type="text/javascript">
-			$(document).ready(function() {
-				showAddressList();
-				showCartList();
-			});
+<script type="text/javascript">
+    $(document).ready(function () {
+        showAddressList();
+        showCartList();
+    });
 
-			function showCartList() {
-				$("#cart-list").empty();
+    function showCartList() {
+        $("#cart-list").empty();
 
-				$.ajax({
-					url: "/carts/list",
-					data: location.search.substr(1),
-					type: "GET",
-					dataType: "JSON",
-					success: function(json) {
-						let list = json.data;
-						console.log("count=" + list.length);
-						let allCount = 0;
-						let allPrice = 0;
-						for (let i = 0; i < list.length; i++) {
-							console.log(list[i].title);
-							let tr = '<tr>'
-									+ '<td><img className = "img-fluid" src="..#{image}collect1.jpeg" alt = "Responsive image"></td>'
-									+ '<td><input type="hidden" name="cids" value="#{cid}" />#{title}</td>'
-									+ '<td>$<span>#{realPrice}</span></td>'
-									+ '<td>#{num}</td>'
-									+ '<td>$<span>#{totalPrice}</span></td>'
-								  + '</tr>';
+        $.ajax({
+            url: "/carts/list",
+            data: location.search.substr(1),
+            type: "GET",
+            dataType: "JSON",
+            success: function (json) {
+                let list = json.data;
+                console.log("count=" + list.length);
+                let allCount = 0;
+                let allPrice = 0;
+                for (let i = 0; i < list.length; i++) {
+                    console.log(list[i].title);
+                    let tr = '<tr>'
+                        + '<td><img className = "img-fluid" src="..#{image}collect1.jpeg" alt = "Responsive image"></td>'
+                        + '<td><input type="hidden" name="cids" value="#{cid}" />#{title}</td>'
+                        + '<td>$<span>#{realPrice}</span></td>'
+                        + '<td>#{num}</td>'
+                        + '<td>$<span>#{totalPrice}</span></td>'
+                        + '</tr>';
 
-							tr = tr.replace(/#{cid}/g, list[i].cid);
-							tr = tr.replace(/#{image}/g, list[i].image);
-							tr = tr.replace(/#{title}/g, list[i].title);
-							tr = tr.replace(/#{realPrice}/g, list[i].realPrice);
-							tr = tr.replace(/#{num}/g, list[i].num);
-							tr = tr.replace(/#{totalPrice}/g, list[i].realPrice * list[i].num);
+                    tr = tr.replace(/#{cid}/g, list[i].cid);
+                    tr = tr.replace(/#{image}/g, list[i].image);
+                    tr = tr.replace(/#{title}/g, list[i].title);
+                    tr = tr.replace(/#{realPrice}/g, list[i].realPrice);
+                    tr = tr.replace(/#{num}/g, list[i].num);
+                    tr = tr.replace(/#{totalPrice}/g, list[i].realPrice * list[i].num);
 
-							$("#cart-list").append(tr);
+                    $("#cart-list").append(tr);
 
-							allCount += list[i].num;
-							allPrice += list[i].realPrice * list[i].num;
-						}
-						$("#all-count").html(allCount);
-						$("#all-price").html(allPrice);
-					}
-				});
-			}
+                    allCount += list[i].num;
+                    allPrice += list[i].realPrice * list[i].num;
+                }
+                $("#all-count").html(allCount);
+                $("#all-price").html(allPrice);
+            }
+        });
+    }
 
-			function showAddressList() {
-				$("#address-list").empty();
-				$.ajax({
-					url: "/addresses",
-					type: "GET",
-					dataType: "JSON",
-					success: function(json) {
-						let list = json.data;
-						console.log("count=" + list.length);
-						for (let i = 0; i < list.length; i++) {
-							console.log(list[i].name);
-							let opt = '<option value="#{aid}">#{name} | #{state}#{city}#{address} | #{phone}</option>';
+    function showAddressList() {
+        $("#address-list").empty();
+        $.ajax({
+            url: "/addresses",
+            type: "GET",
+            dataType: "JSON",
+            success: function (json) {
+                let list = json.data;
+                console.log("count=" + list.length);
+                for (let i = 0; i < list.length; i++) {
+                    console.log(list[i].name);
+                    let opt = '<option value="#{aid}">#{name} | #{state}#{city}#{address} | #{phone}</option>';
 
-							opt = opt.replace("#{name}", list[i].name);
-							opt = opt.replace("#{state}", list[i].stateName);
-							opt = opt.replace("#{city}", list[i].cityName);
-							opt = opt.replace("#{address}", list[i].address);
-							opt = opt.replace("#{phone}", list[i].phone);
+                    opt = opt.replace("#{name}", list[i].name);
+                    opt = opt.replace("#{state}", list[i].stateName);
+                    opt = opt.replace("#{city}", list[i].cityName);
+                    opt = opt.replace("#{address}", list[i].address);
+                    opt = opt.replace("#{phone}", list[i].phone);
 
-							$("#address-list").append(opt);
-						}
-					}
-				});
-			}
+                    $("#address-list").append(opt);
+                }
+            }
+        });
+    }
 
-		</script>
-	</body>
+</script>
+</body>
 
 </html>

@@ -9,7 +9,9 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-/** This class implements the service methods from product service interface */
+/**
+ * This class implements the service methods from product service interface
+ */
 @Service
 public class ProductServiceImpl implements IProductService {
     @Autowired
@@ -17,6 +19,7 @@ public class ProductServiceImpl implements IProductService {
 
     /**
      * Return the list of most popular 6 products
+     *
      * @return the list of most popular 6 products
      */
     @Override
@@ -36,6 +39,7 @@ public class ProductServiceImpl implements IProductService {
 
     /**
      * Return the detailed product by product id
+     *
      * @param id product id
      * @return the detailed product by product id, return null if not found
      */

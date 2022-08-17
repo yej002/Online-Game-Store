@@ -47,7 +47,7 @@ public class Address extends BaseEntity implements Serializable {
     public void setStateName(String StateName) {
         this.stateName = StateName;
     }
-    
+
     public String getCityName() {
         return cityName;
     }

@@ -48,7 +48,7 @@ public class AddressController extends BaseController {
     }
 
     /**
-     * @param aid address id
+     * @param aid     address id
      * @param session Session that contains user information
      * @return JsonResult that state success
      */
@@ -61,7 +61,7 @@ public class AddressController extends BaseController {
     }
 
     /**
-     * @param aid address id
+     * @param aid     address id
      * @param session Session that contains user information
      * @return JsonResult that state success
      */

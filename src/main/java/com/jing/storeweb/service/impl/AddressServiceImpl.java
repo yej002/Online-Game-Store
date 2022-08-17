@@ -25,11 +25,13 @@ public class AddressServiceImpl implements IAddressService {
     // defined in application properties
     @Value("${user.address.max-count}")
     private int maxCount;
+
     /**
      * Create a new address
-     * @param uid user id
+     *
+     * @param uid      user id
      * @param username username
-     * @param address address
+     * @param address  address
      */
     @Override
     public void addNewAddress(Integer uid, String username, Address address) {
@@ -59,6 +61,7 @@ public class AddressServiceImpl implements IAddressService {
 
     /**
      * Return the list of address for user by user id
+     *
      * @param uid user id
      * @return list of address
      */
@@ -71,8 +74,9 @@ public class AddressServiceImpl implements IAddressService {
 
     /**
      * Set the address to default
-     * @param aid address id
-     * @param uid user id
+     *
+     * @param aid      address id
+     * @param uid      user id
      * @param username username
      */
     @Transactional
@@ -108,8 +112,9 @@ public class AddressServiceImpl implements IAddressService {
 
     /**
      * Delete the address
-     * @param aid address id
-     * @param uid user id
+     *
+     * @param aid      address id
+     * @param uid      user id
      * @param username username
      */
     @Transactional
@@ -160,6 +165,7 @@ public class AddressServiceImpl implements IAddressService {
 
     /**
      * Return the detailed address by address id
+     *
      * @param aid address id
      * @param uid user id
      * @return the detailed address by address id

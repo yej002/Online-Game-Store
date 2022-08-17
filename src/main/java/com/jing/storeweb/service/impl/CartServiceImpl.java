@@ -29,9 +29,10 @@ public class CartServiceImpl implements ICartService {
 
     /**
      * Add product to shopping cart
-     * @param uid user id
-     * @param pid product id
-     * @param amount number of product
+     *
+     * @param uid      user id
+     * @param pid      product id
+     * @param amount   number of product
      * @param username username
      */
     @Override
@@ -76,6 +77,7 @@ public class CartServiceImpl implements ICartService {
 
     /**
      * Find and return object(data) for shopping cart by user id
+     *
      * @param uid user id
      * @return The list of object in shopping cart
      */
@@ -87,8 +89,9 @@ public class CartServiceImpl implements ICartService {
 
     /**
      * Return the result of increment number of products in shopping cart
-     * @param cid cart id
-     * @param uid user id
+     *
+     * @param cid      cart id
+     * @param uid      user id
      * @param username username
      * @return the result of increment number of products in shopping cart
      */
@@ -117,8 +120,9 @@ public class CartServiceImpl implements ICartService {
 
     /**
      * Return the result of decrement number of products in shopping cart
-     * @param cid cart id
-     * @param uid user id
+     *
+     * @param cid      cart id
+     * @param uid      user id
      * @param username username
      * @return the result of decrement number of products in shopping cart
      */
@@ -147,7 +151,8 @@ public class CartServiceImpl implements ICartService {
 
     /**
      * Find and return value object(data) for shopping carts by multiple cart ids
-     * @param uid user id
+     *
+     * @param uid  user id
      * @param cids a list of cart ids
      * @return return a list of object(data) for shopping carts
      */

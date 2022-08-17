@@ -3,8 +3,6 @@ package com.jing.storeweb.controller;
 import com.jing.storeweb.controller.exceptions.*;
 import com.jing.storeweb.entity.User;
 import com.jing.storeweb.service.IUserService;
-import com.jing.storeweb.service.exceptions.InsertException;
-import com.jing.storeweb.service.exceptions.UsernameDuplicateException;
 import com.jing.storeweb.util.JsonResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -17,12 +15,29 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
-/** This class defined the controller of user
+/**
+ * This class defined the controller of user
  * It takes the requests from user, and sends response to front-end
  */
 @RestController
 @RequestMapping("users")
 public class UserController extends BaseController {
+    /**
+     * set maximum constrain for size of avatar to 10MB
+     */
+    public static final int AVATAR_MAX_SIZE = 10 * 1024 * 1024;
+    /**
+     * set the type of avatar
+     */
+    public static final List<String> AVATAR_TYPES = new ArrayList<>();
+
+    static {
+        AVATAR_TYPES.add("image/jpeg");
+        AVATAR_TYPES.add("image/png");
+        AVATAR_TYPES.add("image/bmp");
+        AVATAR_TYPES.add("image/gif");
+    }
+
     @Autowired
     private IUserService userService;
 
@@ -36,11 +51,10 @@ public class UserController extends BaseController {
         return new JsonResult<>(OK);
     }
 
-
     /**
      * @param username username
      * @param password user password
-     * @param session session that contains the user information
+     * @param session  session that contains the user information
      * @return the data for user and status of success for login
      */
     @RequestMapping("login")
@@ -56,7 +70,7 @@ public class UserController extends BaseController {
     /**
      * @param oldPassword user old password
      * @param newPassword user new password
-     * @param session session that contains user information
+     * @param session     session that contains user information
      * @return JsonResult that contains status of success for password changing
      */
     @RequestMapping("change_password")
@@ -80,7 +94,7 @@ public class UserController extends BaseController {
     }
 
     /**
-     * @param user user
+     * @param user    user
      * @param session session that contains user information
      * @return JsonResult that contains status of success for updating information
      */
@@ -92,20 +106,8 @@ public class UserController extends BaseController {
         return new JsonResult<>(OK);
     }
 
-    /** set maximum constrain for size of avatar to 10MB */
-    public static final int AVATAR_MAX_SIZE = 10 * 1024 * 1024;
-
-    /** set the type of avatar */
-    public static final List<String> AVATAR_TYPES = new ArrayList<>();
-    static {
-        AVATAR_TYPES.add("image/jpeg");
-        AVATAR_TYPES.add("image/png");
-        AVATAR_TYPES.add("image/bmp");
-        AVATAR_TYPES.add("image/gif");
-    }
-
     /**
-     * @param file uploaded file for avatar
+     * @param file    uploaded file for avatar
      * @param session session that contains user information
      * @return JsonResult that contains avatar and the status of success for change avatar
      */

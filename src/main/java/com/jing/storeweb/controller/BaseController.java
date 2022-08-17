@@ -11,11 +11,14 @@ import javax.servlet.http.HttpSession;
  * This class defined the common elements of the controller
  */
 public class BaseController {
-    /** request response success, code 200 */
+    /**
+     * request response success, code 200
+     */
     public static final int OK = 200;
 
     /**
      * get user id from HttpSession
+     *
      * @param session HttpSession object
      * @return user id
      */
@@ -25,6 +28,7 @@ public class BaseController {
 
     /**
      * get username from HttpSession
+     *
      * @param session HttpSession object
      * @return username
      */
@@ -32,7 +36,9 @@ public class BaseController {
         return session.getAttribute("username").toString();
     }
 
-    /** @ExceptionHandler Used to uniformly handle exceptions thrown by methods */
+    /**
+     * @ExceptionHandler Used to uniformly handle exceptions thrown by methods
+     */
     @ExceptionHandler({ServiceException.class, FileUploadException.class})
     public JsonResult<Void> handleException(Throwable e) {
         JsonResult<Void> result = new JsonResult<>(e);

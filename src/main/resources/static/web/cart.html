@@ -2,285 +2,298 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Game Store</title>
-	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Store</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
 
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-		  integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-	<script src="../bootstrap3/jquery-1.8.3.min.js"></script>
-	<script src="../bootstrap3/js/bootstrap.js"></script>
-	<link rel="stylesheet" href="../bootstrap3/font-awesome-4.7.0/css/font-awesome.css" />
-	<link rel="stylesheet" href="../css/app.css">
-	<link rel="stylesheet" type="text/css" href="../css/layout.css" />
-	<link rel="stylesheet" type="text/css" href="../css/cart.css" />
-	<link rel="stylesheet" type="text/css" href="../bootstrap3/css/bootstrap.css">
+    <script src="../bootstrap3/jquery-1.8.3.min.js"></script>
+    <script src="../bootstrap3/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="../bootstrap3/font-awesome-4.7.0/css/font-awesome.css"/>
+    <link rel="stylesheet" href="../css/app.css">
+    <link rel="stylesheet" type="text/css" href="../css/layout.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/cart.css"/>
+    <link rel="stylesheet" type="text/css" href="../bootstrap3/css/bootstrap.css">
 
 </head>
 
 <body>
-	<header>
-		<nav class="navbar navbar-expand-md navbar-dark fixed-top">
-			<a class="navbar-brand font-weight-bold" href="index.html">Game Store</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
-					aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarCollapse">
-				<ul class="navbar-nav mr-auto">
-					<li class="nav-item active">
-						<a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-					</li>
-					<form class="form-inline mt-2 mt-md-0">
-						<input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-						<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-					</form>
-					<li class="nav-item">
-						<a class="nav-link" href="#"><span class="fa fa-heart"></span> Favorite</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#"><span class="fa fa-file-text"></span> Order History</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="cart.html"><span class="fa fa-cart-plus"></span> Cart</a>
-					</li>
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+        <a class="navbar-brand font-weight-bold" href="index.html">Game Store</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <form class="form-inline mt-2 mt-md-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><span class="fa fa-heart"></span> Favorite</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><span class="fa fa-file-text"></span> Order History</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="cart.html"><span class="fa fa-cart-plus"></span> Cart</a>
+                </li>
 
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#"
-						   id="navbarDropdownMenuLink" role="button"
-						   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							<span class="fa fa-gears"></span> Change Info
-						</a>
-						<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-							<a class="dropdown-item" href="password.html">Change Password</a>
-							<a class="dropdown-item" href="userdata.html">Change Contact Info</a>
-							<a class="dropdown-item" href="upload.html">Change Avatar</a>
-							<a class="dropdown-item" href="address.html">Change Address</a>
-						</div>
-					</li>
-					<li class="nav-item">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#"
+                       id="navbarDropdownMenuLink" role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="fa fa-gears"></span> Change Info
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="password.html">Change Password</a>
+                        <a class="dropdown-item" href="userdata.html">Change Contact Info</a>
+                        <a class="dropdown-item" href="upload.html">Change Avatar</a>
+                        <a class="dropdown-item" href="address.html">Change Address</a>
+                    </div>
+                </li>
+                <li class="nav-item">
 
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="login.html"><span class="fa fa-user"></span> Logout</a>
-					</li>
-				</ul>
-			</div>
-		</nav>
-	</header>
-	<div>
-		<img src="../images/index/logo1.png">
-	</div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html"><span class="fa fa-user"></span> Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<div>
+    <img src="../images/index/logo1.png">
+</div>
 <!--------------shopping cart----------------->
-	<div class="container">
-		<div class="col-md-offset-1 col-md-10">
-			<div class="panel panel-primary">
-				<div class="panel-heading">
-					<p class="panel-title"><span class="fa fa-shopping-cart"></span>Shopping Cart</p>
-				</div>
-				<div class="panel-body">
-					<form action="orderConfirm.html" role="form" >
-						<table class="cart-table" width="100%">
-							<thead>
-							<tr>
-								<th width="8%">
-									<input type="checkbox" class="ckall" onclick="checkall(this)" />Select All</th>
-								<th width="110"></th>
-								<th width="29%">Item</th>
-								<th width="11%">Price</th>
-								<th width="15%">Amount</th>
-								<th width="11%">Total Price</th>
-								<th>Operation</th>
-							</tr>
-							</thead>
-							<tbody id="cart-list" class="cart-body">
-							<tr>
-								<td>
-									<input type="checkbox" class="ckitem" />
-								</td>
-								<td><img class="img-fluid" src="../images/portal/5NBA-2K23-Championship-Edition--PlayStation-5/collect.jpeg" alt="Responsive image"></td>
-								<td>God of War Ragnarok Launch Edition - PlayStation 5</td>
-								<td>$<span id="goodsPrice1">49</span></td>
-								<td>
-									<input type="button" value="-" class="num-btn" onclick="reduceNum(1)" />
-									<input id="goodsCount1" type="text" size="2" readonly="readonly" class="num-text" value="1">
-									<input class="num-btn" type="button" value="+" onclick="addNum(1)" />
-								</td>
-								<td><span id="goodsCast1"></span></td>
-								<td>
-									<input type="button" onclick="delCartItem(this)" class="cart-del btn btn-default btn-xs" value="delete" />
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<input type="checkbox" class="ckitem" />
-								</td>
-								<td><img class="img-fluid" src="../images/portal/5NBA-2K23-Championship-Edition--PlayStation-5/collect.jpeg" alt="Responsive image"></td>
-								<td>God of War Ragnarok Launch Edition - PlayStation 5</td>
-								<td>$<span id="goodsPrice2">49</span></td>
-								<td>
-									<input type="button" value="-" class="num-btn" onclick="reduceNum(2)" />
-									<input id="goodsCount2" type="text" size="2" readonly="readonly" class="num-text" value="1">
-									<input class="num-btn" type="button" value="+" onclick="addNum(2)" />
-								</td>
-								<td><span id="goodsCast2"></span></td>
-								<td>
-									<input type="button" onclick="delCartItem(this)" class="cart-del btn btn-default btn-xs" value="delete" />
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<input type="checkbox" class="ckitem" />
-								</td>
-								<td><img class="img-fluid" src="../images/portal/5NBA-2K23-Championship-Edition--PlayStation-5/collect.jpeg" alt="Responsive image"></td>
-								<td>God of War Ragnarok Launch Edition - PlayStation 5</td>
-								<td>$<span id="goodsPrice3">49</span></td>
-								<td>
-									<input type="button" value="-" class="num-btn" onclick="reduceNum(3)" />
-									<input id="goodsCount3" type="text" size="2" readonly="readonly" class="num-text" value="1">
-									<input class="num-btn" type="button" value="+" onclick="addNum(3)" />
-								</td>
-								<td><span id="goodsCast3"></span></td>
-								<td>
-									<input type="button" onclick="delCartItem(this)" class="cart-del btn btn-default btn-xs" value="delete" />
-								</td>
-							</tr>
-							</tbody>
-						</table>
-						<div id="total-bar" class="total-bar">
+<div class="container">
+    <div class="col-md-offset-1 col-md-10">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <p class="panel-title"><span class="fa fa-shopping-cart"></span>Shopping Cart</p>
+            </div>
+            <div class="panel-body">
+                <form action="orderConfirm.html" role="form">
+                    <table class="cart-table" width="100%">
+                        <thead>
+                        <tr>
+                            <th width="8%">
+                                <input type="checkbox" class="ckall" onclick="checkall(this)"/>Select All
+                            </th>
+                            <th width="110"></th>
+                            <th width="29%">Item</th>
+                            <th width="11%">Price</th>
+                            <th width="15%">Amount</th>
+                            <th width="11%">Total Price</th>
+                            <th>Operation</th>
+                        </tr>
+                        </thead>
+                        <tbody id="cart-list" class="cart-body">
+                        <tr>
+                            <td>
+                                <input type="checkbox" class="ckitem"/>
+                            </td>
+                            <td><img class="img-fluid"
+                                     src="../images/portal/5NBA-2K23-Championship-Edition--PlayStation-5/collect.jpeg"
+                                     alt="Responsive image"></td>
+                            <td>God of War Ragnarok Launch Edition - PlayStation 5</td>
+                            <td>$<span id="goodsPrice1">49</span></td>
+                            <td>
+                                <input type="button" value="-" class="num-btn" onclick="reduceNum(1)"/>
+                                <input id="goodsCount1" type="text" size="2" readonly="readonly" class="num-text"
+                                       value="1">
+                                <input class="num-btn" type="button" value="+" onclick="addNum(1)"/>
+                            </td>
+                            <td><span id="goodsCast1"></span></td>
+                            <td>
+                                <input type="button" onclick="delCartItem(this)" class="cart-del btn btn-default btn-xs"
+                                       value="delete"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" class="ckitem"/>
+                            </td>
+                            <td><img class="img-fluid"
+                                     src="../images/portal/5NBA-2K23-Championship-Edition--PlayStation-5/collect.jpeg"
+                                     alt="Responsive image"></td>
+                            <td>God of War Ragnarok Launch Edition - PlayStation 5</td>
+                            <td>$<span id="goodsPrice2">49</span></td>
+                            <td>
+                                <input type="button" value="-" class="num-btn" onclick="reduceNum(2)"/>
+                                <input id="goodsCount2" type="text" size="2" readonly="readonly" class="num-text"
+                                       value="1">
+                                <input class="num-btn" type="button" value="+" onclick="addNum(2)"/>
+                            </td>
+                            <td><span id="goodsCast2"></span></td>
+                            <td>
+                                <input type="button" onclick="delCartItem(this)" class="cart-del btn btn-default btn-xs"
+                                       value="delete"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" class="ckitem"/>
+                            </td>
+                            <td><img class="img-fluid"
+                                     src="../images/portal/5NBA-2K23-Championship-Edition--PlayStation-5/collect.jpeg"
+                                     alt="Responsive image"></td>
+                            <td>God of War Ragnarok Launch Edition - PlayStation 5</td>
+                            <td>$<span id="goodsPrice3">49</span></td>
+                            <td>
+                                <input type="button" value="-" class="num-btn" onclick="reduceNum(3)"/>
+                                <input id="goodsCount3" type="text" size="2" readonly="readonly" class="num-text"
+                                       value="1">
+                                <input class="num-btn" type="button" value="+" onclick="addNum(3)"/>
+                            </td>
+                            <td><span id="goodsCast3"></span></td>
+                            <td>
+                                <input type="button" onclick="delCartItem(this)" class="cart-del btn btn-default btn-xs"
+                                       value="delete"/>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div id="total-bar" class="total-bar">
 							<span class="pull-right">Selected
 								<span id="all-count">0</span> Items Total $
 								<span id="all-price">0</span>
 							</span>
-						</div>
-						<div>
+                    </div>
+                    <div>
 								<span class="pull-right">
-								<input type="submit" value=" Checkout " class="btn btn-primary btn-lg link-account" />
+								<input type="submit" value=" Checkout " class="btn btn-primary btn-lg link-account"/>
 							</span>
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
-	</div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 
-		<script type="text/javascript">
-			$(document).ready(function() {
-				showCartList();
-			});
+<script type="text/javascript">
+    $(document).ready(function () {
+        showCartList();
+    });
 
-			function showCartList() {
-				$("#cart-list").empty();
-				$.ajax({
-					url: "/carts",
-					type: "GET",
-					dataType: "JSON",
-					success: function(json) {
-						let list = json.data;
-						let allCount = 0;
-						let allPrice = 0;
-						for (let i = 0; i < list.length; i++) {
-							let tr = '<tr>'
-									+ '<td>'
-									+ '<input name="cids" value="#{cid}" type="checkbox" class="ckitem" />'
-									+ '</td>'
-									+ '<td><img src="..#{image}collect1.jpeg" class="img-responsive" /></td>'
-									+ '<td>#{title}</td>'
-									+ '<td>$<span id="price-#{cid}">#{realPrice}</span></td>'
-									+ '<td>'
-									+ '<input class="num-btn" type="button" value="-" onclick="reduceNum(#{cid})" />'
-									+ '<input id="num-#{cid}" type="text" size="2" readonly="readonly" class="num-text" value="#{num}">'
-									+ '<input class="num-btn" type="button" value="+" onclick="addNum(#{cid})" />'
-									+ '</td>'
-									+ '<td>$<span id="total-price-#{cid}">#{totalPrice}</span></td>'
-									+ '<td>'
-									+ '<input type="button" onclick="delCartItem(this)" class="cart-del btn btn-default btn-xs" value="Delete" />'
-									+ '</td>'
-									+ '</tr>';
+    function showCartList() {
+        $("#cart-list").empty();
+        $.ajax({
+            url: "/carts",
+            type: "GET",
+            dataType: "JSON",
+            success: function (json) {
+                let list = json.data;
+                let allCount = 0;
+                let allPrice = 0;
+                for (let i = 0; i < list.length; i++) {
+                    let tr = '<tr>'
+                        + '<td>'
+                        + '<input name="cids" value="#{cid}" type="checkbox" class="ckitem" />'
+                        + '</td>'
+                        + '<td><img src="..#{image}collect1.jpeg" class="img-responsive" /></td>'
+                        + '<td>#{title}</td>'
+                        + '<td>$<span id="price-#{cid}">#{realPrice}</span></td>'
+                        + '<td>'
+                        + '<input class="num-btn" type="button" value="-" onclick="reduceNum(#{cid})" />'
+                        + '<input id="num-#{cid}" type="text" size="2" readonly="readonly" class="num-text" value="#{num}">'
+                        + '<input class="num-btn" type="button" value="+" onclick="addNum(#{cid})" />'
+                        + '</td>'
+                        + '<td>$<span id="total-price-#{cid}">#{totalPrice}</span></td>'
+                        + '<td>'
+                        + '<input type="button" onclick="delCartItem(this)" class="cart-del btn btn-default btn-xs" value="Delete" />'
+                        + '</td>'
+                        + '</tr>';
 
-							tr = tr.replace(/#{cid}/g, list[i].cid);
-							tr = tr.replace(/#{title}/g, list[i].title);
-							tr = tr.replace(/#{image}/g, list[i].image);
-							tr = tr.replace(/#{realPrice}/g, list[i].realPrice);
-							tr = tr.replace(/#{num}/g, list[i].num);
-							tr = tr.replace(/#{totalPrice}/g, list[i].realPrice * list[i].num);
+                    tr = tr.replace(/#{cid}/g, list[i].cid);
+                    tr = tr.replace(/#{title}/g, list[i].title);
+                    tr = tr.replace(/#{image}/g, list[i].image);
+                    tr = tr.replace(/#{realPrice}/g, list[i].realPrice);
+                    tr = tr.replace(/#{num}/g, list[i].num);
+                    tr = tr.replace(/#{totalPrice}/g, list[i].realPrice * list[i].num);
 
-							$("#cart-list").append(tr);
-							allCount += list[i].num;
-							allPrice += list[i].realPrice * list[i].num;
+                    $("#cart-list").append(tr);
+                    allCount += list[i].num;
+                    allPrice += list[i].realPrice * list[i].num;
 
-							// let div = '<div className="total-bar">'
-							// 		+ '<span className="pull-right">Selected'
-							// 		+ '<span id="all-count">#{all-count}</span> Items Total $'
-							// 		+ '<span id="all-price">#{all-price}</span>'
-							// 		+ '</span>'
-							// 		+ '</div>'
+                    // let div = '<div className="total-bar">'
+                    // 		+ '<span className="pull-right">Selected'
+                    // 		+ '<span id="all-count">#{all-count}</span> Items Total $'
+                    // 		+ '<span id="all-price">#{all-price}</span>'
+                    // 		+ '</span>'
+                    // 		+ '</div>'
 
-							// div = div.replace(/#{all-count}/g, allCount);
-							// div = div.replace(/#{all-price}/g, allPrice);
-							// $("#total-bar").append(div);
-							// $("#total-bar").append(div);
-							$("#all-count").html(allCount);
-							$("#all-price").html(allPrice);
-						}
+                    // div = div.replace(/#{all-count}/g, allCount);
+                    // div = div.replace(/#{all-price}/g, allPrice);
+                    // $("#total-bar").append(div);
+                    // $("#total-bar").append(div);
+                    $("#all-count").html(allCount);
+                    $("#all-price").html(allPrice);
+                }
 
-					},
-					error: function(xhr) {
-						alert("Error, please login." + xhr.status);
-						location.href = "login.html";
-					}
-				});
-			}
+            },
+            error: function (xhr) {
+                alert("Error, please login." + xhr.status);
+                location.href = "login.html";
+            }
+        });
+    }
 
-			function addNum(cid) {
-				$.ajax({
-					url: "/carts/" + cid + "/num/add",
-					type: "POST",
-					dataType: "JSON",
-					success: function(json) {
-						if (json.state == 200) {
-							// showCartList();
-							$("#num-" + cid).val(json.data);
-							let price = $("#price-" + cid).html();
-							let totalPrice = price * json.data;
-							$("#total-price-" + cid).html(totalPrice);
-						} else {
-							alert("Failed to increase number." + json.message);
-						}
-					},
-					error: function(xhr) {
-						alert("Error, please login and try again later." + xhr.status);
-						location.href = "login.html";
-					}
-				});
-			}
+    function addNum(cid) {
+        $.ajax({
+            url: "/carts/" + cid + "/num/add",
+            type: "POST",
+            dataType: "JSON",
+            success: function (json) {
+                if (json.state == 200) {
+                    // showCartList();
+                    $("#num-" + cid).val(json.data);
+                    let price = $("#price-" + cid).html();
+                    let totalPrice = price * json.data;
+                    $("#total-price-" + cid).html(totalPrice);
+                } else {
+                    alert("Failed to increase number." + json.message);
+                }
+            },
+            error: function (xhr) {
+                alert("Error, please login and try again later." + xhr.status);
+                location.href = "login.html";
+            }
+        });
+    }
 
-			function reduceNum(cid) {
-				$.ajax({
-					url: "/carts/" + cid + "/num/reduce",
-					type: "POST",
-					dataType: "JSON",
-					success: function(json) {
-						if (json.state == 200) {
-							// showCartList();
-							$("#num-" + cid).val(json.data);
-							let price = $("#price-" + cid).html();
-							let totalPrice = price * json.data;
-							$("#total-price-" + cid).html(totalPrice);
-						} else {
-							alert("Failed to decrease number！" + json.message);
-						}
-					},
-					error: function(xhr) {
-						alert("Error, please login and try again later." + xhr.status);
-						location.href = "login.html";
-					}
-				});
-			}
+    function reduceNum(cid) {
+        $.ajax({
+            url: "/carts/" + cid + "/num/reduce",
+            type: "POST",
+            dataType: "JSON",
+            success: function (json) {
+                if (json.state == 200) {
+                    // showCartList();
+                    $("#num-" + cid).val(json.data);
+                    let price = $("#price-" + cid).html();
+                    let totalPrice = price * json.data;
+                    $("#total-price-" + cid).html(totalPrice);
+                } else {
+                    alert("Failed to decrease number！" + json.message);
+                }
+            },
+            error: function (xhr) {
+                alert("Error, please login and try again later." + xhr.status);
+                location.href = "login.html";
+            }
+        });
+    }
 
-		</script>
-	</body>
+</script>
+</body>
 
 </html>

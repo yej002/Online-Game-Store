@@ -4,6 +4,7 @@ import java.io.Serializable;
 
 /**
  * Set response to front-end
+ *
  * @param <E> type
  */
 public class JsonResult<E> implements Serializable {

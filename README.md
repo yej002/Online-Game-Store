@@ -1,8 +1,4 @@
 # Online Game Store
-
-## Features:
-### Sign in/ Signup
-- Session based User registration, athorization and authentication 
 ![online_game_store_readme1](https://user-images.githubusercontent.com/49883143/197321033-08a5f928-aef8-4057-b577-aceb05129a66.gif)
 
 
